@@ -1,0 +1,370 @@
+/* ==========================================================================
+   1. GLOBAL RESETS & STYLING BASE
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Playfair Display', 'Segoe UI', Arial, sans-serif;
+    background-color: #fff8f8; /* Soft cosmetic-inspired background */
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. SITE HEADERS & PRIMARY NAVIGATION
+   ========================================================================== */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.nav-container nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.nav-container nav a {
+    color: #444444;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-container nav a:hover {
+    color: #e91e63; /* Signature Brand Pink */
+}
+
+/* ==========================================================================
+   3. HERO BANNER MODULE
+   ========================================================================== */
+.hero-banner {
+    padding: 100px 20px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-banner h1 {
+    font-size: 3rem;
+    color: #e91e63;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hero-banner p {
+    font-size: 1.2rem;
+    color: #555555;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   4. LAYOUT SECTIONS & GENERAL TYPOGRAPHY
+   ========================================================================== */
+.section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section h2 {
+    color: #e91e63;
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.section p {
+    font-size: 17px;
+    color: #555555;
+    max-width: 750px;
+    margin: 0 auto 40px auto;
+}
+
+.section a {
+    color: #e91e63;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.section a:hover {
+    text-decoration: underline;
+    color: #c2185b;
+}
+
+/* ==========================================================================
+   5. FLEXBOX PRODUCTS & SERVICES GRID
+   ========================================================================== */
+.about-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.about-card {
+    background: #ffffff;
+    border: 1px solid #f3e6e6;
+    border-radius: 16px;
+    padding: 30px 20px;
+    width: 270px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(233, 30, 99, 0.02);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(233, 30, 99, 0.08);
+}
+
+.about-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.about-card h3 {
+    color: #e91e63;
+    font-size: 1.4rem;
+    margin: 10px 0 12px 0;
+    font-weight: 600;
+}
+
+.about-card p {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Staff Profile Specific Image Formatting */
+#staff .about-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    border: 3px solid #fce4ec;
+}
+
+/* ==========================================================================
+   6. INTERACTIVE CATEGORIES BAR (Footer Area Menu)
+   ========================================================================== */
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e91e63; /* Pink cosmetic theme */
+    padding: 1.5rem;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.nav-bar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-bar a img {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-bar a:hover {
+    color: #ffeb3b; /* Golden highlight on hover */
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   7. PROFESSIONAL CONTACT FORM SYSTEM
+   ========================================================================== */
+.contact-form {
+    max-width: 550px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    border: 1px solid #f3e6e6;
+}
+
+.contact-form label {
+    margin: 18px 0 6px 0;
+    text-align: left;
+    font-weight: 600;
+    color: #e91e63;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 14px;
+    border: 1px solid #e2d4d4;
+    background-color: #fffdfd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #e91e63;
+    box-shadow: 0 0 0 4px rgba(233, 30, 99, 0.1);
+    background-color: #ffffff;
+}
+
+.contact-form button {
+    margin-top: 30px;
+    padding: 16px;
+    background-color: #e91e63;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.contact-form button:hover {
+    background-color: #c2185b;
+}
+
+.contact-form button:active {
+    transform: scale(0.98);
+}
+
+.contact-details {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 16px;
+    color: #444444;
+}
+
+.contact-details p {
+    margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   8. RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .hero-banner h1 {
+        font-size: 2.2rem;
+    }
+    
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    .nav-container nav {
+        gap: 20px;
+    }
+
+    .about-card {
+        width: 100%; /* Spans cleanly into a list on phone screens */
+        max-width: 340px;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+}
+/* ==========================================================================
+   9. STAFF PAGE SPECIFIC STYLES
+   ========================================================================== */
+
+/* Target staff cards uniquely inside the staff section wrapper */
+#staff .about-card {
+    background: #ffffff;
+    border: 1px solid #f9ebeb;
+    border-radius: 16px;
+    padding: 40px 20px; /* Extra vertical breathing room for profiles */
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+}
+
+/* Elegant circular crop formatting for team portraits */
+#staff .about-card img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%; /* Perfect circle */
+    object-fit: cover;  /* Prevents the employee pictures from stretching */
+    margin: 0 auto 20px auto;
+    border: 4px solid #fff0f3; /* Soft cosmetic pink border around the photo */
+    box-shadow: 0 4px 10px rgba(233, 30, 99, 0.05);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Profile Photo Hover Effect */
+#staff .about-card:hover img {
+    transform: scale(1.05); /* Smoothly zooms into the portrait slightly */
+    border-color: #e91e63;   /* Shifts the subtle border to brand pink */
+}
+
+/* Staff Name Styling */
+#staff .about-card h3 {
+    font-size: 1.5rem;
+    color: #333333; /* Darker tone for clean legibility */
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+/* Job Title Accent Tag */
+#staff .about-card p:first-of-type {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+/* Biography / Description text */
+#staff .about-card p:last-of-type {
+    font-size: 14.5px;
+    color: #666666;
+    line-height: 1.6;
+}
